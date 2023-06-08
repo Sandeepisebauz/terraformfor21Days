@@ -74,7 +74,7 @@ resource "aws_eip" "eip1" {
   }
 }
 
-//Now Create NAT Gateway in each subnet
+//Now Create NAT Gateway in each public subnet
 resource "aws_nat_gateway" "nat0" {
   allocation_id = aws_eip.eip0.id
   subnet_id     = aws_subnet.public0.id
@@ -108,6 +108,7 @@ resource "aws_route_table" "public_rt0" {
   }
 
 }
+
 //Private Subnet routable routes traffic to NAT gatewauy
 resource "aws_route_table" "private_rt0" {
   vpc_id = aws_vpc.main.id
