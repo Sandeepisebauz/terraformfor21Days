@@ -158,3 +158,4 @@ resource "aws_route_table_association" "rt_asso_private1" {
   route_table_id = aws_route_table.private_rt1.id
 
 }
+
