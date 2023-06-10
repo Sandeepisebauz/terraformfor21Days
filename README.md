@@ -15,3 +15,5 @@ Git repo for Terraform
          - If PR is approved, merge to main branch
          - git checkout main
          - git pull
+
+- Day2: Create EC2 instance with ami and instance_type
